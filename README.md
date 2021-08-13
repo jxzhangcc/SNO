@@ -45,6 +45,8 @@ This is a script to compute SNO based on Gaussian calculation results. Gaussian 
     ```
     If fchk file is supplied, the SNOs will be saved as a fchk file named `CH3_SNO.fchk`. Otherwise, only SNO eigenvalues will be printed.
 
+    When saving SNO to fchk file, a warning message `Warning: Spin symmetry not match!` might be printed which can be safely ignored. This warning arises only to remind that MOs are spin-polarized (alpha MOs are not idential to beta MOs) but SNOs are spinless.
+
     Corresponding orbital transformation (COT) is also implemented and can be called with a parameter 'COT' or simply 'c'. Without any extra parameter, the program computes SNO by default.
 
 
