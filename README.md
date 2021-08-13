@@ -49,4 +49,7 @@ This is a script to compute SNO based on Gaussian calculation results. Gaussian 
 
     Corresponding orbital transformation (COT) is also implemented and can be called with a parameter 'COT' or simply 'c'. Without any extra parameter, the program computes SNO by default.
 
+## Related publication
+For an extensive discussion on the chemical implication of SNO and comparison against COT, see doi.org/10.1002/jcc.25762
+
 
