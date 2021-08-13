@@ -32,7 +32,7 @@ This is a script to compute SNO based on Gaussian calculation results. Gaussian 
     - *CH3.chk*
     - *CH3.47*
 
-    Using methyl radical as an example, shown above is a typical Gaussian input file for SNO analysis. There would be an extra output file named CH3.47 in addition to ordinary Gaussian output files.
+    Using methyl radical as an example, shown above are a typical Gaussian input file and the corresponding output files needed for SNO analysis. In addition to ordinary Gaussian output files, there is an extra CH3.47 file that contains necessary info for NBO analysis. However, NBO analysis is not needed for SNO analysis. The 47 file serves only as an interface for SNO analysis.
 
 2. Run SNO analysis
     First, convert chk file to fchk file for later visualization.
