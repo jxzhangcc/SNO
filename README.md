@@ -12,7 +12,7 @@ This is a script to compute SNO based on Gaussian calculation results. Gaussian 
 
     **Input**
 
-    - *FILENAME.gjf*
+    - *CH3.gjf*
     ```
     %chk=CH3.chk
     #p opt freq b3lyp/6-31G* pop=nboread
