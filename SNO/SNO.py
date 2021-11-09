@@ -1,9 +1,7 @@
 import sys
 import numpy as np
-import paraparser.paraparser as pp
-# from mymath.matrix import visualize
-from fileparser.parse47 import parse_47
-from filegenerator.genfchk import quicksave
+from parse47 import parse_47
+from genfchk import quicksave
 
 def COT(d, forder=False):
     amoao, bmoao = d['trafomo']
@@ -100,18 +98,15 @@ def genSNO(fn47, mfn=None, mode='SNO', silent=False, forder=False):
         raise UserWarning('Unrecognized keyword: mode=%s' % mode)
 
 def main():
-    paras = pp.main()
+    paras = sys.argv[1:]
     fn47 = paras.fns[1]
     fnfchk = paras.fns[2] if paras.fns[2:] else None
     mode = 'SNO'
-    if 'COT' in [_.upper() for _ in paras.rest] or 'c' in paras.args:
+    if 'COT' in [_.upper() for _ in paras] or 'c' in paras:
         mode = 'COT'
-    if 'SNO' in [_.upper() for _ in paras.rest] or 's' in paras.args:
+    if 'SNO' in [_.upper() for _ in paras] or 's' in paras:
         mode = 'SNO'
-    paras.kwargs.setdefault('mode', mode)
-    if 'f' in paras.args:
-        paras.kwargs.setdefault('forder', True)
-    genSNO(fn47, fnfchk, **paras.kwargs)
+    genSNO(fn47, fnfchk, mode)
 
 if __name__ == '__main__':
     main()
