@@ -99,8 +99,8 @@ def genSNO(fn47, mfn=None, mode='SNO', silent=False, forder=False):
 
 def main():
     paras = sys.argv[1:]
-    fn47 = paras.fns[1]
-    fnfchk = paras.fns[2] if paras.fns[2:] else None
+    fn47 = paras[0]
+    fnfchk = paras[1] if paras[1:] else None
     mode = 'SNO'
     if 'COT' in [_.upper() for _ in paras] or 'c' in paras:
         mode = 'COT'
