@@ -49,6 +49,9 @@ This is a script to compute SNO based on Gaussian calculation results. Gaussian 
 
     Corresponding orbital transformation (COT) is also implemented and can be called with a parameter 'COT' or simply 'c'. Without any extra parameter, the program computes SNO by default.
 
+3. Analyze SNO results
+    If you open the SNO fchk file in GaussView, please remember that the occupations (shown as up/down arrows in the orbital visualization window) are NOT meaningful any more. SNOs are not ordered in orbital energy (as ordinary MOs do). Instead, they are ordered by absolute SNO eigenvalues (i.e. how much spin each orbital contributes). Hence the 1st orbital (with largest absolute eigenvalue) is usually what you should first take a look.
+
 ## Related publication
 For an extensive discussion on the chemical implication of SNO and comparison against COT, see doi.org/10.1002/jcc.25762
 
